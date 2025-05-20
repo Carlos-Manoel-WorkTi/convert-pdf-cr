@@ -11,33 +11,33 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-theme-green">ImgToPDF</h3>
             <p className="text-gray-300 dark:text-gray-400 mb-4">
-              Simple tool to convert your images to PDF documents with ease.
-              Upload from your device or scan directly using your camera.
+              Ferramenta simples para converter suas imagens em documentos PDF com facilidade.
+              Faça o upload do seu dispositivo ou escaneie diretamente usando sua câmera.
             </p>
           </div>
           
           <div className="hidden sm:block md:block">
-            <h3 className="text-lg font-semibold mb-4 text-theme-green">Features</h3>
+            <h3 className="text-lg font-semibold mb-4 text-theme-green">Recursos</h3>
             <ul className="space-y-2 text-gray-300 dark:text-gray-400">
-              <li>• Easy image upload</li>
-              <li>• Camera scanning</li>
-              <li>• PDF preview</li>
-              <li>• Instant download</li>
-              <li>• Free to use</li>
+              <li>• Upload fácil de imagens</li>
+              <li>• Escaneamento com câmera</li>
+              <li>• Visualização de PDF</li>
+              <li>• Download instantâneo</li>
+              <li>• Gratuito para usar</li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-theme-green">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4 text-theme-green">Contato</h3>
             <p className="text-gray-300 dark:text-gray-400 mb-4">
-              Have questions or feedback? Reach out to us.
+              Tem perguntas ou feedback? Entre em contato conosco.
             </p>
-            <p className="text-gray-300 dark:text-gray-400">contact@imgtopdf.example.com</p>
+            <p className="text-gray-300 dark:text-gray-400">contato@imgtopdf.exemplo.com</p>
             <div className="mt-4">
               <Button asChild variant="outline" className="border-theme-green text-theme-green hover:bg-theme-green hover:text-white">
                 <a href="/">
                   <Home className="mr-2 h-4 w-4" />
-                  Back to Home
+                  Voltar para Início
                 </a>
               </Button>
             </div>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} ImgToPDF. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ImgToPDF. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

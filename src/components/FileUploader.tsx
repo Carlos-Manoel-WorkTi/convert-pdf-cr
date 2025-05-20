@@ -32,7 +32,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelected }) => {
       if (isValidImageFile(file)) {
         onFileSelected(file);
       } else {
-        toast.error("Please upload a valid image file (JPEG, PNG, GIF)");
+        toast.error("Por favor, envie um arquivo de imagem válido (JPEG, PNG, GIF)");
       }
     }
   };
@@ -44,7 +44,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelected }) => {
       if (isValidImageFile(file)) {
         onFileSelected(file);
       } else {
-        toast.error("Please upload a valid image file (JPEG, PNG, GIF)");
+        toast.error("Por favor, envie um arquivo de imagem válido (JPEG, PNG, GIF)");
       }
     }
   };
@@ -68,16 +68,16 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelected }) => {
         onDrop={handleDrop}
       >
         <Upload className="w-8 sm:w-12 h-8 sm:h-12 text-theme-green mb-2" />
-        <p className="mb-1 text-base sm:text-lg font-medium text-center">Click or drag an image to upload</p>
+        <p className="mb-1 text-base sm:text-lg font-medium text-center">Clique ou arraste uma imagem para enviar</p>
         <p className="mb-4 text-xs sm:text-sm text-muted-foreground text-center">
-          Supported formats: JPG, PNG, GIF
+          Formatos suportados: JPG, PNG, GIF
         </p>
         <Button
           className="button-primary"
           onClick={() => fileInputRef.current?.click()}
         >
           <FileText className="mr-2 h-4 w-4" />
-          Select Image
+          Selecionar Imagem
         </Button>
         <input
           ref={fileInputRef}

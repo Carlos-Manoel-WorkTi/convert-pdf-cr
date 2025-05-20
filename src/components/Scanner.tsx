@@ -27,8 +27,8 @@ const Scanner: React.FC<ScannerProps> = ({ onImageCaptured }) => {
         setIsScanning(true);
       }
     } catch (error) {
-      console.error("Error accessing camera:", error);
-      toast.error("Failed to access camera. Please ensure camera permissions are granted.");
+      console.error("Erro ao acessar a câmera:", error);
+      toast.error("Falha ao acessar a câmera. Por favor, certifique-se que as permissões da câmera foram concedidas.");
     }
   };
 
@@ -58,7 +58,7 @@ const Scanner: React.FC<ScannerProps> = ({ onImageCaptured }) => {
         canvas.toBlob((blob) => {
           if (blob) {
             // Create a File from the blob
-            const file = new File([blob], "scanned-image.png", { type: "image/png" });
+            const file = new File([blob], "imagem-escaneada.png", { type: "image/png" });
             onImageCaptured(file);
             stopScanning();
           }
@@ -83,26 +83,26 @@ const Scanner: React.FC<ScannerProps> = ({ onImageCaptured }) => {
                 className="button-primary"
                 onClick={captureImage}
               >
-                Capture Image
+                Capturar Imagem
               </Button>
               <Button 
                 variant="outline"
                 onClick={stopScanning}
               >
-                Cancel
+                Cancelar
               </Button>
             </div>
           </>
         ) : (
           <div className="flex flex-col items-center justify-center p-6 sm:p-10">
             <Scan className="w-8 sm:w-12 h-8 sm:h-12 text-theme-green mb-2" />
-            <p className="mb-4 text-center text-sm sm:text-base">Scan an image using your camera</p>
+            <p className="mb-4 text-center text-sm sm:text-base">Escaneie uma imagem usando sua câmera</p>
             <Button 
               className="button-primary"
               onClick={startScanning}
             >
               <Scan className="mr-2 h-4 w-4" />
-              Start Scanner
+              Iniciar Scanner
             </Button>
           </div>
         )}
