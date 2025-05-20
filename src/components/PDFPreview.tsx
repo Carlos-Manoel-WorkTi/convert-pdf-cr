@@ -44,9 +44,9 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ pdfBlob, onReset }) => {
     <div className="w-full flex flex-col">
       <div className="flex flex-col items-center justify-center mb-5">
         <h2 className="text-xl font-bold mb-1">PDF Preview</h2>
-        <p className="text-sm text-gray-600 mb-4">Your image has been converted to PDF</p>
+        <p className="text-sm text-muted-foreground mb-4">Your image has been converted to PDF</p>
         
-        <div className="flex space-x-3 mb-4">
+        <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 mb-4">
           <Button 
             className="button-primary"
             onClick={handleDownload}
@@ -64,11 +64,11 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ pdfBlob, onReset }) => {
         </div>
       </div>
       
-      <div className="w-full border border-gray-300 rounded-lg overflow-hidden bg-white">
+      <div className="w-full border border-border rounded-lg overflow-hidden bg-card">
         <iframe
           ref={iframeRef}
           src={pdfUrl}
-          className="w-full h-[500px]"
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px]"
           title="PDF Preview"
         />
       </div>

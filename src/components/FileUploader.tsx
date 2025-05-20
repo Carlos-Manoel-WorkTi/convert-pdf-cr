@@ -57,19 +57,19 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelected }) => {
   return (
     <div className="w-full">
       <div
-        className={`flex flex-col items-center justify-center w-full p-6 border-2 border-dashed rounded-lg transition-all duration-300 ${
+        className={`flex flex-col items-center justify-center w-full p-4 sm:p-6 border-2 border-dashed rounded-lg transition-all duration-300 ${
           dragActive 
             ? "border-theme-green bg-theme-green/10" 
-            : "border-gray-300 bg-gray-50 hover:bg-gray-100"
+            : "border-border bg-background/50 hover:bg-background/80"
         }`}
         onDragEnter={handleDrag}
         onDragOver={handleDrag}
         onDragLeave={handleDrag}
         onDrop={handleDrop}
       >
-        <Upload className="w-12 h-12 text-theme-green mb-2" />
-        <p className="mb-1 text-lg font-medium">Click or drag an image to upload</p>
-        <p className="mb-4 text-sm text-gray-500">
+        <Upload className="w-8 sm:w-12 h-8 sm:h-12 text-theme-green mb-2" />
+        <p className="mb-1 text-base sm:text-lg font-medium text-center">Click or drag an image to upload</p>
+        <p className="mb-4 text-xs sm:text-sm text-muted-foreground text-center">
           Supported formats: JPG, PNG, GIF
         </p>
         <Button

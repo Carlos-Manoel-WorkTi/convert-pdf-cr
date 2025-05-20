@@ -5,6 +5,7 @@
 
 @layer base {
   :root {
+    /* Light mode */
     --background: 152 67% 98%;
     --foreground: 220 47% 10%;
 
@@ -35,6 +36,37 @@
 
     --radius: 0.5rem;
   }
+
+  .dark {
+    /* Dark mode */
+    --background: 220 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 47% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 47% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 30% 20%;
+    --muted-foreground: 210 30% 70%;
+
+    --accent: 220 30% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 160 84% 39%;
+  }
 }
 
 @layer base {
@@ -54,5 +86,9 @@
   
   .button-secondary {
     @apply bg-theme-black text-white hover:bg-theme-black-light;
+  }
+
+  .card-glass {
+    @apply bg-background/80 backdrop-blur-sm border border-border;
   }
 }

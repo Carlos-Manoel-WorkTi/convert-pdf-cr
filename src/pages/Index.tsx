@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import { convertImageToPdf } from "@/utils/pdfConverter";
 import { FileText, Scan } from "lucide-react";
 import { toast } from "sonner";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -42,22 +43,27 @@ const Index = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-green-50">
-      <main className="container mx-auto px-4 py-16 flex-grow">
-        <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-theme-black mb-4">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-background to-background/50">
+      {/* Theme toggle button */}
+      <div className="fixed top-4 right-4 z-50">
+        <ThemeToggle />
+      </div>
+
+      <main className="container mx-auto px-4 py-8 md:py-12 lg:py-16 flex-grow">
+        <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12 animate-fade-in">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Image to PDF <span className="text-theme-green">Converter</span>
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Convert your images to PDF documents easily. Upload from your device or scan with your camera.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           {!pdfBlob ? (
-            <Card className="shadow-lg border-theme-green/20">
+            <Card className="shadow-lg border-primary/20 card-glass">
               <CardHeader>
-                <CardTitle className="text-center text-xl text-theme-black">
+                <CardTitle className="text-center text-xl text-foreground">
                   Choose Your Image Source
                 </CardTitle>
                 <CardDescription className="text-center">
@@ -67,11 +73,11 @@ const Index = () => {
               <CardContent>
                 <Tabs defaultValue="upload" value={activeTab} onValueChange={setActiveTab} className="w-full">
                   <TabsList className="grid w-full grid-cols-2 mb-8">
-                    <TabsTrigger value="upload" className="data-[state=active]:bg-theme-green data-[state=active]:text-white">
+                    <TabsTrigger value="upload" className="data-[state=active]:bg-theme-green data-[state=active]:text-primary-foreground">
                       <FileText className="mr-2 h-4 w-4" />
                       Upload Image
                     </TabsTrigger>
-                    <TabsTrigger value="scan" className="data-[state=active]:bg-theme-green data-[state=active]:text-white">
+                    <TabsTrigger value="scan" className="data-[state=active]:bg-theme-green data-[state=active]:text-primary-foreground">
                       <Scan className="mr-2 h-4 w-4" />
                       Scan Image
                     </TabsTrigger>

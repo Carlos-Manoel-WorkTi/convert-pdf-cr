@@ -69,7 +69,7 @@ const Scanner: React.FC<ScannerProps> = ({ onImageCaptured }) => {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="relative w-full max-w-md bg-gray-50 border border-gray-300 rounded-lg overflow-hidden">
+      <div className="relative w-full max-w-md bg-background/50 border border-border rounded-lg overflow-hidden">
         {isScanning ? (
           <>
             <video 
@@ -94,9 +94,9 @@ const Scanner: React.FC<ScannerProps> = ({ onImageCaptured }) => {
             </div>
           </>
         ) : (
-          <div className="flex flex-col items-center justify-center p-10">
-            <Scan className="w-12 h-12 text-theme-green mb-2" />
-            <p className="mb-4 text-center">Scan an image using your camera</p>
+          <div className="flex flex-col items-center justify-center p-6 sm:p-10">
+            <Scan className="w-8 sm:w-12 h-8 sm:h-12 text-theme-green mb-2" />
+            <p className="mb-4 text-center text-sm sm:text-base">Scan an image using your camera</p>
             <Button 
               className="button-primary"
               onClick={startScanning}
